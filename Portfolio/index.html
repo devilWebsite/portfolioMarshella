@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    .logo2 {
+        width: 80% !important;
+    }
+
+    /* Skills Container */
+.s-about__skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 20px; /* Space between items */
+    justify-content: center;
+}
+
+/* Skill Box */
+.s-about__skill {
+    position: relative;
+    width: 80%;
+    aspect-ratio: 1 / 1; /* Ensure square boxes */
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill Icons and Images */
+.s-about__skill img,
+.s-about__skill .skill-icon {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay */
+.s-about__skill .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #73b6dfcc;
+    color: #000102;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effects */
+.s-about__skill:hover img,
+.s-about__skill:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.s-about__skill:hover .overlay {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .s-about__skills-container {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .s-about__skills-container {
+        grid-template-columns: 1fr; /* One item per row on very small screens */
+    }
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.contact-icon {
+    font-size: 50px;
+    color: #000000; /* Adjust as needed */
+}
+
+
+</style>
+
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img class="logo2" src="images/logo-01.svg" alt="Homepage">
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
+                        <li><a class="smoothscroll" href="#about">About Me</a></li>
+                        <li><a class="smoothscroll" href="#skills">My Skills</a></li>
+                        <li><a class="smoothscroll" href="#works">Certificates</a></li>
+                        <li><a class="smoothscroll" href="#projects">Project</a></li>
+                        <li><a class="smoothscroll" href="#footer">Contact Me</a></li>
+                    </ul> <!-- s-header__menu-links -->
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
+
+
+        <!-- # intro
+        ================================================== -->
+        <section id="intro" class="s-intro target-section">
+
+            <div class="row s-intro__content width-sixteen-col">
+                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+
+                    <div class="s-intro__content-text">
+
+                        <div class="s-intro__content-pretitle text-pretitle">Hello</div>
+                        <h1 class="s-intro__content-title">
+                            I am Marshella Colina<br>
+                            Bachelor of Arts With Honours (Creative Arts) l<br>
+                            Major in Creative Writing
+                        </h1>
+
+                        <div class="s-intro__content-btns">
+                            <a class="smoothscroll btn" href="#about">More About Me</a>
+                            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
+                        </div> <!-- s-intro__content-btns -->
+
+                    </div> <!-- s-intro__content-text -->
+
+                </div> <!-- s-intro__content-inner -->
+            </div> <!-- s-intro__content -->
+
+            <ul class="s-intro__social social-list">
+                <li>
+                    <a href="https://www.facebook.com/people/Marshella-Colina/100071732795153/?mibextid=ZbWKwL" target="_blank">
+                        <img src="images/icons/facebook.png" />
+                        <span class="u-screen-reader-text">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.link/3fa4vq" target="_blank">
+                        <img src="images/icons/whatsapp.png" />
+                        <span class="u-screen-reader-text">WhatsApp</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@macece._?_t=8scEslC5f98&_r=1" target="_blank">
+                        <img src="images/icons/tiktok.png" />
+                        <span class="u-screen-reader-text">Tik Tok</span>
+                    </a>
+                </li>
+            
+
+            </ul> <!-- end s-intro__social -->
+
+            <div class="s-intro__content-media">
+                <img src="images/main-bg.png" srcset="images/main-bg.png 1x, images/main-bg.png 2x" alt="">
+            </div> <!-- s-intro__content-media -->
+
+            <!-- <div class="s-intro__btn-download">
+                <a class="btn btn--stroke" href="#0">Get My CV</a>
+            </div> end s-intro__btn-download -->
+
+            <div class="s-intro__scroll-down">
+                <a href="#about" class="smoothscroll">
+                    <div class="scroll-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            <path
+                                d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="scroll-text u-screen-reader-text">Scroll Down</span>
+                </a>
+            </div> <!-- s-intro__scroll-down -->
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- # about
+        ================================================== -->
+        <section id="about" class="s-about target-section" style="background-color: #92caed;">
+
+            <div class="row s-about__content">
+                <div class="column xl-12">
+
+                    <div class="section-header" data-num="01">
+                        <h2 class="text-display-title">About Me.</h2>
+                    </div> <!-- end section-header -->
+
+                    <p class="attention-getter">
+                        Hi, my name is Marshella Colina, and I’m 22 years old. I was born and raised in Kuching,
+                        Sarawak, surrounded by the vibrant culture and traditions of my hometown. Currently, I am
+                        furthering my studies at Universiti Malaysia Sabah, located in the beautiful state of Sabah.
+                    </p>
+
+                    <p class="attention-getter">
+                        I am passionate about exploring new knowledge and experiences, especially in my field of study.
+                        I enjoy engaging in creative projects, learning about different perspectives, and contributing
+                        positively to my community. In my free time, I like to read, write, and immerse myself in
+                        activities that inspire creativity and growth.
+                    </p>
+                    <p class="attention-getter">Feel free to connect with me if you'd like to share ideas, collaborate, or just have a great conversation!</p>
+
+                 
+                </div> <!--end column -->
+            </div> <!--end s-about__content -->
+
+        </section> <!-- end s-about -->
+
+ <!-- # about
+        ================================================== -->
+        <section id="skills" class="s-about target-section">
+
+            <div class="row s-about__content">
+                <div class="column xl-12">
+
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">Skills</h2>
+                    </div> <!-- end section-header -->
+
+                    <div class="grid-list-items s-about__blocks">
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Technical Skills</h4>
+                            <div class="s-about__skills-container">
+                                <div class="s-about__skill" data-name="Product Design" >
+                                    <img src="images/icons/html-5.png" style="margin-top: 60px;" alt="HTML Icon" />
+                                    <div class="overlay">HTML</div>
+                                </div>
+                                <div class="s-about__skill" data-name="UI/UX Design">
+                                    <img src="images/icons/css.png" style="margin-top: 60px;" alt="HTML Icon" />     
+                                    <div class="overlay">CSS</div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-list-items s-about__blocks">
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Design Skills</h4>
+                            <div class="s-about__skills-container">
+                                <div class="s-about__skill" data-name="Product Design" >
+                                    <img src="images/icons/photoshop.png" style="margin-top: 60px;" alt="HTML Icon" />
+                                    <div class="overlay">Adobe Photoshop</div>
+                                </div>
+                                <div class="s-about__skill" data-name="UI/UX Design">
+                                    <img src="images/icons/illustrator.png" style="margin-top: 60px;" alt="HTML Icon" />                                    
+                                    <div class="overlay">Adobe Illustrator</div>
+                                </div>
+                                <div class="s-about__skill" data-name="Prototyping">
+                                    <img src="images/icons/figma.png" style="margin-top: 60px;" alt="HTML Icon" />                                   
+                                     <div class="overlay">Figma</div>
+                                </div>
+                                <div class="s-about__skill" data-name="Prototyping">
+                                    <img src="images/icons/canva.webp" style="margin-top: 60px;" alt="HTML Icon" />                                    
+                                    <div class="overlay">Canva</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-list-items s-about__blocks">
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Creative Writing</h4>
+                            <div class="s-about__skills-container">
+                                <div class="s-about__skill" data-name="Product Design" >
+                                    <img src="images/icons/short.png" style="margin-top: 60px;" alt="HTML Icon" />
+                                    <div class="overlay">Short Stories</div>
+                                </div>
+                                <div class="s-about__skill" data-name="UI/UX Design">
+                                    <img src="images/icons/poetry.png" style="margin-top: 60px;" alt="HTML Icon" />             
+                                    <div class="overlay">Poetry</div>
+                                </div>
+                                <div class="s-about__skill" data-name="Prototyping">
+                                    <img src="images/icons/java-script.png" style="margin-top: 60px;" alt="HTML Icon" />   
+                                    <div class="overlay">Scripts</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-list-items s-about__blocks">
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Content Creation</h4>
+                            <div class="s-about__skills-container">
+                                <div class="s-about__skill" data-name="Product Design" >
+                                    <img src="images/icons/blog.png" style="margin-top: 60px;" alt="HTML Icon" /> 
+                                <div class="overlay">Blogging</div>
+                                </div>
+                                <div class="s-about__skill" data-name="UI/UX Design">
+                                    <img src="images/icons/writing.png" style="margin-top: 60px;" alt="HTML Icon" /> 
+                                    <div class="overlay">Copywriting</div>
+                                </div>
+                                <div class="s-about__skill" data-name="Prototyping">
+                                    <img src="images/icons/seo.png" style="margin-top: 60px;" alt="HTML Icon" /> 
+                                    <div class="overlay">SEO Writing</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-list-items s-about__blocks">
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Academic Writing</h4>
+                            <div class="s-about__skills-container">
+                                <div class="s-about__skill" data-name="Product Design" >
+                                    <img src="images/icons/analytics.png" style="margin-top: 60px;" alt="HTML Icon" />
+                                    <div class="overlay">Research Papers</div>
+                                </div>
+                                <div class="s-about__skill" data-name="UI/UX Design">
+                                    <img src="images/icons/essay.png" style="margin-top: 60px;" alt="HTML Icon" />               
+                                    <div class="overlay">Essay</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!--end column -->
+            </div> <!--end s-about__content -->
+
+        </section> <!-- end s-about -->
+
+
+
+        <!-- # works
+        ================================================== -->
+        <section id="works" class="s-works target-section">
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="03">
+                        <h2 class="text-display-title">Certificates.</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row folio-entries">
+
+                <div class="column entry">
+                    <a href="images/cert1.png" class="entry__link glightbox"
+                        data-glightbox="title: White Knit Cap; description: .entry__desc-01">
+                        <div class="entry__thumb">
+                            <img src="images/cert1.png"
+                                srcset="images/cert1.png 1x, images/cert1@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">HIMPUNAN DEKLAMASI PUISI UNTUKMU PALESTIN</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-01">
+                        <p>
+                          
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/cert2-01.png" class="entry__link glightbox"
+                        data-glightbox="title: WoodCraft; description: .entry__desc-02">
+                        <div class="entry__thumb">
+                            <img src="images/cert2-01.png"
+                                srcset="images/cert2-01.png 1x, images/cert2-01@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">PERTANDINGAN MEMBACA CERPEN</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-02">
+                        <p>
+                     
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/cert3-01.png" class="entry__link glightbox"
+                        data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
+                        <div class="entry__thumb">
+                            <img src="images/cert3-01.png"
+                                srcset="images/cert3-01.png 1x, images/cert3-01@2x.png 2x"
+                                alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">PROGRAM JELAJAH PUISI DI SMK KABONGAN, SEMPORNA</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-03">
+                        <p>
+                       
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/cert4-01.png" class="entry__link glightbox"
+                        data-glightbox="title: Grayscale; description: .entry__desc-04">
+                        <div class="entry__thumb">
+                            <img src="images/cert4-01.png"
+                                srcset="images/cert4-01.png 1x, images/cert4-01@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">PROGRAM SESI BICARA KEMERDEKAAN</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-04">
+                        <p>
+                          
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/cert5-01.png" class="entry__link glightbox"
+                        data-glightbox="title: The Lamp; description: .entry__desc-05">
+                        <div class="entry__thumb">
+                            <img src="images/cert5-01.png"
+                                srcset="images/cert5-01.png 1x, images/cert5-01@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">KEM SENI PENULISAN</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-05">
+                        <p>
+                           
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/cert6.png" class="entry__link glightbox"
+                        data-glightbox="title: Tropical; description: .entry__desc-06">
+                        <div class="entry__thumb">
+                            <img src="images/cert6.png"
+                                srcset="images/cert6.png 1x, images/cert6@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">AKADEMI SENI & TEKNOLOGI KREATIF</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-06">
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+                <div class="column entry">
+                    <a href="images/cert7.png" class="entry__link glightbox"
+                        data-glightbox="title: Tropical; description: .entry__desc-06">
+                        <div class="entry__thumb">
+                            <img src="images/cert7.png"
+                                srcset="images/cert7.png 1x, images/folio/cert7@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">PROGRAM CAKNA KOMUNITI YATIM</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-06">
+                        <p>
+                         
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+                <div class="column entry">
+                    <a href="images/cert8.png" class="entry__link glightbox"
+                        data-glightbox="title: Tropical; description: .entry__desc-06">
+                        <div class="entry__thumb">
+                            <img src="images/cert8.png"
+                                srcset="images/cert8.png 1x, images/cert8@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">DIALOG BERSAMA FUTURE FOR THE WORLD : STOP PLASTIC WASTE</h4>
+                            <div class="entry__cat">CERTIFICATES</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-06">
+                        <p>
+                          
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+            </div> <!-- folio entries -->
+
+        </section> <!-- end s-works -->
+
+        <section id="projects" class="s-works target-section">
+            <div class="row u-add-half-bottom">
+
+                <div class="section-header" data-num="03">
+                    <h2 class="text-display-title">Project</h2>
+                </div> <!-- end section-header -->
+    
+                <div class="column xl-12 md-12">
+    
+                    <h3 class="u-add-bottom">My Project</h3>
+    
+                    <div class="video-container">
+                        <iframe width="500" height="300" src="https://www.youtube.com/embed/7aQW-9gczr4?si=akY05dTzpI7G_LEx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>  
+                                      </div>
+    
+                </div>
+                
+            </div> <!-- end row -->
+        </section>
+
+
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section" style="padding-top: 55px;">
+            <div class="row">
+                <div class="column xl-12 lg-12">
+                    <div class="section-header light-on-dark" data-num="04">
+                        <h2 class="text-display-title">Get In Touch.</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+        
+            <div class="row">
+    
+                <div class="column xl-6 md-12">
+                    <h3>Contact Details</h3>
+                    <br>
+                
+                    <div class="contact-detail">
+                        <div class="contact-item" style="padding-bottom: 30px;">
+                            <span class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <!-- <img src="images/icons/gps.png" /> -->
+                            </span>
+                            <a style="color:black;">Jalan UMS, 88400 Kota Kinabalu, Sabah</a>
+                        </div>
+                        <div class="contact-item" style="padding-bottom: 30px;">
+                            <span class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </span>
+                            <a href="tel:+601129307141" style="color:black;">011-2930 7141</a>
+                        </div>
+                        <div class="contact-item" style="padding-bottom: 30px;">
+                            <span class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <a href="mailto:marshellacolina1016@gmail.com" style="color:black;">marshellacolina1016@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <div class="column xl-6 md-12">
+    
+                    <h3 class="u-add-bottom">Chat with me!</h3>
+    
+                    <form action="" method="post">
+                        
+                        <div>
+                            <label for="sampleRecipientInput">Name</label>
+                            <input class="u-fullwidth" type="text" placeholder="Name" id="sampleInput">
+                        </div>
+                        <div>
+                            <label for="sampleInput">Your email</label>
+                            <input class="u-fullwidth" type="email" placeholder="Email" id="sampleInput">
+                        </div>
+
+                        <label for="exampleMessage">Message</label>
+                        <textarea class="u-fullwidth" placeholder="Your message" id="exampleMessage"></textarea>
+    
+                       
+    
+                        <button class="btn--primary u-fullwidth" type="submit" value="Submit" onclick="">Submit</button>
+                    </form>
+    
+                </div>
+    
+            </div> <!-- end row -->
+            <!-- Embedded Google Map -->
+            <div class="row">
+                <div class="column xl-12 lg-12 s-footer__block s-footer__map">
+                    <h5>Find Me</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24680.1497049577!2d116.10528017165655!3d6.031798479207109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b6b71ee4755e5%3A0xbd517e1c53212fd9!2sUniversity%20Malaysia%20Sabah!5e1!3m2!1sen!2smy!4v1735572886732!5m2!1sen!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div> <!-- end section-footer__map -->
+            </div>
+        
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z">
+                        </path>
+                    </svg>
+                </a>
+                <span>Back To Top</span>
+            </div> <!-- end ss-go-top -->
+        </footer>
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
